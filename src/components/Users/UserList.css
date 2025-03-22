@@ -1,0 +1,340 @@
+
+.user-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .user-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .user-list-header h1 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+    font-size: 1rem;
+  }
+  
+  .logout-button {
+    padding: 0.6rem 1.2rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  
+  .pagination-button {
+    padding: 0.5rem 1rem;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background-color: #3367d6;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #b3b3b3;
+    cursor: not-allowed;
+  }
+  
+  .page-info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 2rem;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .notification {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    animation: fadeOut 3s forwards;
+  }
+  
+  .notification.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .notification.error {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @media (max-width: 768px) {
+    .user-list-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .header-actions {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .search-input {
+      width: 100%;
+    }
+  }
+  
+  /* src/components/Users/UserCard.css */
+  .user-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .user-avatar {
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+  }
+  
+  .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-info {
+    padding: 1.2rem;
+    flex-grow: 1;
+  }
+  
+  .user-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .user-email {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .user-actions {
+    display: flex;
+    padding: 0 1.2rem 1.2rem 1.2rem;
+    gap: 0.8rem;
+  }
+  
+  .edit-button, .delete-button {
+    flex: 1;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .edit-button {
+    background-color: #4285f4;
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #3367d6;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* src/components/Users/EditUser.css */
+  .edit-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 2rem 1rem;
+  }
+  
+  .edit-user-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .edit-user-card h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .cancel-button, .save-button {
+    flex: 1;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cancel-button {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .notification {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    animation: fadeOut 3s forwards;
+  }
+  
+  .notification.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .notification.error {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+  }

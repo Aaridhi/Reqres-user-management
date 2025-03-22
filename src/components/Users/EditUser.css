@@ -1,0 +1,100 @@
+
+.edit-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 2rem 1rem;
+  }
+  
+  .edit-user-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .edit-user-card h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .cancel-button, .save-button {
+    flex: 1;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cancel-button {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .notification {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    animation: fadeOut 3s forwards;
+  }
+  
+  .notification.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .notification.error {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+  }
