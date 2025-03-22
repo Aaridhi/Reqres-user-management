@@ -3,7 +3,7 @@
 This is a React application that integrates with the Reqres API to perform basic user management functions including authentication, listing users, and CRUD operations.
 
 ## Deployed Application
-Check out the live application: https://reqres-user-management.netlify.app/login
+Check out the live application: https://reqres-user-management.vercel.app/login
 
 ## Features
 * **Authentication**: Users can log in with their credentials
